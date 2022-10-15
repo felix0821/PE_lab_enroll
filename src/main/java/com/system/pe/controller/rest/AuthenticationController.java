@@ -1,4 +1,4 @@
-package com.system.pe.controller;
+package com.system.pe.controller.rest;
 
 import javax.validation.Valid;
 

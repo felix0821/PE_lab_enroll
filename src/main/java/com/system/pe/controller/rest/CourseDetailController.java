@@ -1,4 +1,4 @@
-package com.system.pe.controller;
+package com.system.pe.controller.rest;
 
 import java.util.ArrayList;
 import java.util.List;
