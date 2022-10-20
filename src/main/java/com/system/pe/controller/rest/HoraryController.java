@@ -48,7 +48,7 @@ public class HoraryController {
 				CourseDetail courseDetail = horary.getCourseDetailId();
 				Person professor = courseDetail.getProfessorId();
 				String professorInfo = professor.getPersonName()+" "+professor.getPersonLastnameFather();
-				result.add(new HoraryItemDto(horary.getHoraryId(), Constant.getTypeCourse(horary.getHoraryDay()), 
+				result.add(new HoraryItemDto(horary.getHoraryId(), horary.getHoraryDay().toString(), 
 						horary.getHoraryTimeStart(), horary.getHoraryTimeFinal(), courseDetail.getCourseId().getCourseName(), 
 						professorInfo));
 				
@@ -75,7 +75,7 @@ public class HoraryController {
 				CourseDetail courseDetail = horary.getCourseDetailId();
 				Person professor = courseDetail.getProfessorId();
 				String professorInfo = professor.getPersonName()+" "+professor.getPersonLastnameFather();
-				result.add(new HoraryItemDto(horary.getHoraryId(), Constant.getTypeCourse(horary.getHoraryDay()), 
+				result.add(new HoraryItemDto(horary.getHoraryId(), horary.getHoraryDay().toString(), 
 						horary.getHoraryTimeStart(), horary.getHoraryTimeFinal(), courseDetail.getCourseId().getCourseName(), 
 						professorInfo));
 				
