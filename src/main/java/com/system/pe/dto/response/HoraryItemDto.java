@@ -19,17 +19,16 @@ public class HoraryItemDto {
 	
 	private Date finalTime;
 	
-	private String courseName;
-	
 	private String professorName;
+	
+	private HoraryCourseDto courseDetail;
 
-	public HoraryItemDto(Long id, String day, Date startTime, Date finalTime, String courseName, String professorName) {
+	public HoraryItemDto(Long id, String day, Date startTime, Date finalTime, String professorName) {
 		super();
 		this.id = id;
 		this.day = day;
 		this.startTime = startTime;
 		this.finalTime = finalTime;
-		this.courseName = courseName;
 		this.professorName = professorName;
 	}
 
