@@ -12,6 +12,12 @@ public class Constant {
 	public static final String URL_COURSExDETAIL_REQUEST = "/course-detail";
 	public static final String URL_COURSExDETAIL_COURSE_GET = "/course";
 	
+	public static final String URL_ENROLL_REQUEST = "/enroll";
+	public static final String URL_ENROLL_REGISTER_POST = "/register";
+	
+	public static final String URL_HORARY_REQUEST = "/horary";
+	
+	
 //	°Declaraciones de parametros respuestas
 	public static final String SYSTEM_MSG_UNAUTHENTICATED = "Unauthenticated";
 	public static final String SYSTEM_MSG_UNAUTHORIZED = "Unauthenticated";
@@ -27,7 +33,8 @@ public class Constant {
 	public static final Long SYSTEM_ACCOUNT_ADMINISTRATOR = 1000001001001L;
 	public static final Long SYSTEM_PERSON_ADMINISTRATOR = 1000001000001L;
 	
-	
+//	#Respuestas concretadas
+	public static final String SYSTEM_SUCCESS = "Proceso exitoso";
 //	Respuestas de error
 	public static final String SYSTEM_ERROR_AUTH = "Login inválido";
 	public static final String SYSTEM_ERROR_TOKEN = "Error de token";

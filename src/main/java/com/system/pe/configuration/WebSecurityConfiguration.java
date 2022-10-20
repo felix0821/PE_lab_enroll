@@ -28,7 +28,7 @@ public class WebSecurityConfiguration {
 			"/css/**", "/icons/**", "/img/**", "/js/**", "/layer/**", "/", "/index", "/person/recovery-password",
 			"/auth/**","/","/generate-data", "/favicon.ico", "/private-message", "/message","/ws/**",
 			"/our-websocket/**","/ws/message","/ws/private-message","/general/**","/concession/**","/requirement-alert-session/**","/requirement-alert/**",
-			"/person","/requirement-alert-session", "/**"
+			"/person","/requirement-alert-session"
 			};
 	
 	private String[] securedResources = new String[] {
