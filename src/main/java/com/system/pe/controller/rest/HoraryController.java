@@ -39,7 +39,32 @@ public class HoraryController {
 	
 	@GetMapping
 	@ResponseBody
-	public ResponseEntity<?> list(@RequestHeader(name="Authorization")String token){
+	public ResponseEntity<?> list(){
+		List<HoraryItemDto> result;
+		try {
+			result = new ArrayList<>();
+			Iterable<Horary> allHorary = horaryRepository.findAll();
+			for(Horary horary: allHorary) {
+				CourseDetail courseDetail = horary.getCourseDetailId();
+				Person professor = courseDetail.getProfessorId();
+				String professorInfo = professor.getPersonName()+" "+professor.getPersonLastnameFather();
+				result.add(new HoraryItemDto(horary.getHoraryId(), Constant.getTypeCourse(horary.getHoraryDay()), 
+						horary.getHoraryTimeStart(), horary.getHoraryTimeFinal(), courseDetail.getCourseId().getCourseName(), 
+						professorInfo));
+				
+			}
+			allHorary = null;
+			return new ResponseEntity<>(result, HttpStatus.OK);
+		}catch(Exception e) {
+			e.printStackTrace();
+			return new ResponseEntity<>(new Message(Constant.SYSTEM_ERROR), HttpStatus.BAD_REQUEST);
+		}finally {
+			result = null;
+		}
+	}
+
+	@GetMapping(value=Constant.URL_HORARY_PRIVATE_GET)
+	public ResponseEntity<?> listPrivate(@RequestHeader(name="Authorization")String token){
 		List<HoraryItemDto> result;
 		try {
 			result = new ArrayList<>();
@@ -64,5 +89,4 @@ public class HoraryController {
 			result = null;
 		}
 	}
-
 }

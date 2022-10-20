@@ -16,6 +16,7 @@ public class Constant {
 	public static final String URL_ENROLL_REGISTER_POST = "/register";
 	
 	public static final String URL_HORARY_REQUEST = "/horary";
+	public static final String URL_HORARY_PRIVATE_GET = "/private";
 	
 	
 //	°Declaraciones de parametros respuestas
